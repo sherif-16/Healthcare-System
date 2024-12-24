@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resources - Healthcare System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <a href = "calendar\calendar.html"> <img src="Screenshot_2024-10-30_152949-removebg-preview.png" alt="Healthcare System Logo"> </a>
+        </div>
+        <nav>
+            <a href="calendar/calendar.html">Calendar</a>
+            <a href="profile.html">Medical Profile</a>
+            <a href="medications.html">Medications</a>
+            <a href="educational-resources.html">Educational Resources</a> 
+            <button class="logout-button" onclick="confirmLogout()">Logout</button> 
+            <a href="tel:123" class="emergency-button">Emergency</a>
+        </nav>
+    </header>
+
+    <div class="profile-container" id="profile-container">
+        <!-- <div class="profile-pic">
+            <img src="profile_picture.jpg" alt="Profile Picture">
+            <input type="file" id="uploadPhoto" accept="image/*">
+        </div> -->
+        
+        <form class="profile-form">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="bloodType">Blood Type:</label>
+                <input type="text" id="bloodType" name="bloodType">
+            </div>
+            <div class="form-group">
+                <label for="allergies">Allergies:</label>
+                <textarea id="allergies" name="allergies"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="medicalHistory">Medical History:</label>
+                <textarea id="medicalHistory" name="medicalHistory"></textarea>
+            </div>
+            <button type="submit" class="save-btn">Save Changes</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

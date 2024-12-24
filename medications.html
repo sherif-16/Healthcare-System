@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href = "calendar\calendar.html">  <img src="Screenshot_2024-10-30_152949-removebg-preview.png" alt="Healthcare System Logo"> </a>
+        </div>
+        <nav>
+            <a href="calendar/calendar.html">Calendar</a>
+            <a href="profile.html">Medical Profile</a>
+            <a href="medications.html">Medications</a>
+            <a href="educational-resources.html">Educational Resources</a> 
+            <button class="logout-button" onclick="confirmLogout()">Logout</button> 
+            <a href="tel:123" class="emergency-button">Emergency</a>
+        </nav>
+    </header>
+    
+    <main class="medications-container">
+        <section class="medications-section">
+            <h1>Manage Your Medications</h1>
+            <p>Keep track of your medications and schedule with ease.</p>
+            <button onclick="openMedicationModal()">Add Medication</button>
+    
+            <div id="medicationModal" class="modal">
+                <div class="modal-content">
+                    <span onclick="closeMedicationModal()">&times;</span>
+                    <h2>Add Medication</h2>
+                    <form id="medicationForm">
+                        <label for="medicationName">Medication Name</label>
+                        <input type="text" id="medicationName" required>
+                        
+                        <label for="medicationTime">Time to be Taken</label>
+                        <input type="time" id="medicationTime" required>
+                        
+                        <label>Days to be Taken</label>
+                        <div class="days-checkboxes">
+                            <label><input type="checkbox" name="days" value="Sunday"> Sunday</label>
+                            <label><input type="checkbox" name="days" value="Monday"> Monday</label>
+                            <label><input type="checkbox" name="days" value="Tuesday"> Tuesday</label>
+                            <label><input type="checkbox" name="days" value="Wednesday"> Wednesday</label>
+                            <label><input type="checkbox" name="days" value="Thursday"> Thursday</label>
+                            <label><input type="checkbox" name="days" value="Friday"> Friday</label>
+                            <label><input type="checkbox" name="days" value="Saturday"> Saturday</label>
+                        </div>
+                        
+                        <label for="medicationQuantity">Quantity (tablets or ml)</label>
+                        <input type="number" id="medicationQuantity" min="1" required>
+                        
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div id="medicationList">
+                <h2>Your Medications</h2>
+                <ul id="medicationsDisplay"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="medications.js"></script>
+</body>
+</html>
